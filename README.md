@@ -333,10 +333,12 @@ mkdir logs
 # 개발 중 장애물 & 극복 방법
 
 
-- fields.E304 에러 
-migrate실행 시 fields.E304가 발생하였으며, 해결법으론 settings.py 에서 AUTH_USER_MODEL : ‘앱이름.클래스이름’ 을 넣으면 된다고 하여 시도를 했으나, 이것도 실패를 하였으며 나중에서 처음 앱생성 하고서 migrate을 하고서 models.py를 모델링을 해야 AUTH_USER_MODEL : ‘앱이름.클래스이름’ 이 가능 했었습니다.
+- fields.E304 에러
+ 
+  migrate실행 시 fields.E304가 발생하였으며, 해결법으론 settings.py 에서 AUTH_USER_MODEL : ‘앱이름.클래스이름’ 을 넣으면 된다고 하여 시도를 했으나, 이것도 실패를 하였으며 나중에서 처음 앱생성 하고서 migrate을 하고서 models.py를 모델링을 해야 AUTH_USER_MODEL : ‘앱이름.클래스이름’ 이 가능 했었습니다.
 
 - django.core.exceptions.ImproperlyConfigured 에러
+ 
 '''
 class Tag(models.Model):
     name = models.CharField(max_length=50, unique=True, null=True, blank=True)
