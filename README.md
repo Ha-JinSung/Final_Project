@@ -341,7 +341,7 @@ mkdir logs
  
 ```
 class Tag(models.Model):
-    name = models.CharField(max_length=50, unique=True, null=True, blank=True)
+    name = models.CharField(max_length=50, unique=True, null=True(<-오류의 원인), blank=True)
 ```
 Tag 모델 중에 null=True 와 데이터 입력을 안해서 (대개 NULL 값 입력 때문에 발생) 생기거나, Django 모델에서 필드를 수정한 후 migrate 안하면 나오는 오류 (migrate 안한다고 해서 꼭 에러가 나오는게 아니여서 원인 찾는데 시간이 걸렸습니다.) 
 Tag 모델에 null=True를 넣은 후에 python manage.py migrate를 하여 해결 하였습니다.
