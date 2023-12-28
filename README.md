@@ -102,7 +102,7 @@ my_blog
     │      post_list.html
     │      
     └─main
-            index.html
+           index.html
 ```
 
 # ERD 구조
