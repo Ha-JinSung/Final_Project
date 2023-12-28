@@ -332,6 +332,28 @@ mkdir logs
 
 # 개발 중 장애물 & 극복 방법
 
-***
+
+- fields.E304 에러 
+migrate실행 시 fields.E304가 발생하였으며, 해결법으론 settings.py 에서 AUTH_USER_MODEL : ‘앱이름.클래스이름’ 을 넣으면 된다고 하여 시도를 했으나, 이것도 실패를 하였으며 나중에서 처음 앱생성 하고서 migrate을 하고서 models.py를 모델링을 해야 AUTH_USER_MODEL : ‘앱이름.클래스이름’ 이 가능 했었습니다.
+
+- django.core.exceptions.ImproperlyConfigured 에러
+'''
+class Tag(models.Model):
+    name = models.CharField(max_length=50, unique=True, null=True, blank=True)
+'''
+Tag 모델 중에 null=True 와 데이터 입력을 안해서 (대개 NULL 값 입력 때문에 발생) 생기거나, Django 모델에서 필드를 수정한 후 migrate 안하면 나오는 오류 (migrate 안한다고 해서 꼭 에러가 나오는게 아니여서 원인 찾는데 시간이 걸렸습니다.) 
+Tag 모델에 null=True를 넣은 후에 python manage.py migrate를 하여 해결 하였습니다.
+
+---
+
+
+# 프로젝트 소감
+
+- DRF로 개발 실패
+블로그 만들기를 DRF를 사용하여 만들려고 하였으나, 권한부여 및 Serialize, view, router와 Html의 API연결 등등의 기술적인 이해가 부족하여 이후에서 Serialize의 구성을 잡아야 할 갈피를 못잡고 개발에 난항을 겪어서 CBV 모놀리식으로 구현하는 방향으로 바꾸었습니다.
+
+-느낀 점
+처음으로 배운 Python과 Django를 사용하여 블로그를 만들면서 점점 구현되어 가는 모습에 좋기도 하였지만, 아직 이해도 제대로 안된 기술을 무리하게 적용 해보고 싶은 욕심에 너무 한가지에 붙잡혀 기획이 점점 틀어져 버려서 빠르게 구현이 가능한 방법으로 전환하여 개발하게 된 점이 아쉽게 느껴집니다.
+
 
 
