@@ -27,81 +27,43 @@ my_blog
 │  requirements.txt
 │  
 ├─accounts
-│  │  admin.py
-│  │  apps.py
-│  │  forms.py
-│  │  models.py
-│  │  tests.py
-│  │  urls.py
-│  │  views.py
-│  │  __init__.py
-│  │  
-│  ├─migrations
-│  │  │  0001_initial.py
-│  │  │  __init__.py
-│  │  │  
-│  │  └─__pycache__
-│  │          0001_initial.cpython-311.pyc
-│  │          __init__.cpython-311.pyc
-│  │          
-│  └─__pycache__
+│    admin.py
+│    apps.py
+│    models.py
+│    tests.py
+│    urls.py
+│    views.py
 │          
 ├─blog
-│  │  admin.py
-│  │  apps.py
-│  │  forms.py
-│  │  models.py
-│  │  tests.py
-│  │  urls.py
-│  │  views.py
-│  │  __init__.py
-│  │  
-│  ├─migrations
-│  │  │  0001_initial.py
-│  │  │  0002_comment_content.py
-│  │  │  0003_post_tag.py
-│  │  │  0004_remove_post_tag_alter_tag_name.py
-│  │  │  __init__.py
-│  │  │  
-│  │  └─__pycache__
-│  │          
-│  └─__pycache__
+│    admin.py
+│    apps.py
+│    forms.py
+│    models.py
+│    tests.py
+│    urls.py
+│    views.py
 │          
 ├─blogbase
-│  │  asgi.py
-│  │  settings.py
-│  │  urls.py
-│  │  wsgi.py
-│  │  __init__.py
-│  │  
-│  └─__pycache__
+│    asgi.py
+│    settings.py
+│    urls.py
+│    wsgi.py
 │          
 ├─locale
 │  ├─en
-│  │  └─LC_MESSAGES
-│  │          django.mo
-│  │          django.po
 │  │          
 │  └─ko
-│      └─LC_MESSAGES
-│              django.mo
-│              django.po
 │              
-├─logs
-│      bloglog
+├─logs         
+│   bloglog
 │      
 ├─main
-│  │  admin.py
-│  │  apps.py
-│  │  models.py
-│  │  tests.py
-│  │  urls.py
-│  │  views.py
-│  │  
-│  └─migrations
-│    │  __init__.py
-│    └─__pycache__
-│            └─__init__.cpython-311.pyc
+│    admin.py
+│    apps.py
+│    models.py
+│    tests.py
+│    urls.py
+│    views.py
 │          
 ├─media
 │  └─blog
@@ -118,7 +80,7 @@ my_blog
 │  │      styles.css
 │  │      
 │  └─js
-│          scripts.js
+│         scripts.js
 │          
 └─templates
     │  400.html
